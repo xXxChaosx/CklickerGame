@@ -31,57 +31,52 @@
 
 ## Структура проєкту
 
-Lb3/
-├── public/                  # Публічні файли (index.html, favicon, іконки)
-│   └── index.html
-├── src/                     # Весь вихідний код React-додатку
-│   ├── App.jsx              # Головний компонент додатку
-│   ├── App.css              # Головний CSS (може бути неактивний, якщо використовуєте SCSS)
-│   ├── index.js             # Точка входу в застосунок
-│   ├── components/          # Всі React-компоненти інтерфейсу
-│   │   ├── AdminPanel.jsx           # Адмін-панель (швидкі дії для тесту)
-│   │   ├── AntiBonusPanel.jsx       # Відображення та логіка антибонусів
-│   │   ├── AntibonusPopup.jsx       # Випливаюче повідомлення про антибонус
-│   │   ├── BonusPanel.jsx           # Бонуси, колесо фортуни, кейси
-│   │   ├── ClickButton.jsx          # Кнопка кліку
-│   │   ├── GameStats.jsx            # Статистика гравця
-│   │   ├── PrestigePanel.jsx        # Престиж (скидання прогресу)
-│   │   ├── SkinPanel.jsx            # Вибір та купівля скінів
-│   │   └── UpgradePanel.jsx         # Апгрейди
-│   ├── db/                  # Робота з IndexedDB (збереження прогресу)
-│   │   └── indexedDB.js
-│   ├── hooks/               # Кастомні React-хуки для логіки гри
-│   │   ├── useClicker.js            # Основна логіка гри (стани, антибонуси, апгрейди)
-│   │   └── useSaveGame.js           # Автоматичне збереження прогресу
-│   ├── sounds/              # Звукові ефекти для гри
-│   │   ├── antibonus.mp3
-│   │   ├── case.mp3
-│   │   ├── click.mp3
-│   │   ├── prestige.mp3
-│   │   ├── skin.mp3
-│   │   ├── upgrade.mp3
-│   │   └── wheel.mp3
-│   ├── styles/              # SCSS-стилі для всіх компонентів
-│   │   ├── AdminPanel.module.scss
-│   │   ├── AntiBonusPanel.module.scss
-│   │   ├── App.module.scss
-│   │   ├── BonusPanel.module.scss
-│   │   ├── ClickButton.module.scss
-│   │   ├── GameStats.module.scss
-│   │   ├── PrestigePanel.module.scss
-│   │   ├── SkinPanel.module.scss
-│   │   ├── SkinSwitcher.module.scss
-│   │   ├── themes.scss
-│   │   └── UpgradePanel.module.scss
-│   ├── utils/               # Допоміжні функції
-│   │   ├── constants.js
-│   │   └── playSound.js
-│   ├── screenshots/         # Скриншоти для README
-│   │   ├── screenshot.png
-│   │   └── screenshot2.png
-├── .gitignore               # Файли/папки, які не потрапляють у git
-├── package.json             # Опис залежностей та скриптів проекту
-├── README.md                # Документація проекту
+- **public/index.html**  
+  Головний HTML-файл, у який підключається React-додаток.
+
+- **src/App.jsx**  
+  Головний компонент додатку, містить основну логіку і компонування сторінки.
+
+- **src/index.js**  
+  Точка входу в застосунок, підключає App.jsx до DOM.
+
+- **src/components/**  
+  Всі React-компоненти інтерфейсу:
+  - **AdminPanel.jsx** — адмін-панель для тестування (додавання кредитів, скидання прогресу)
+  - **AntiBonusPanel.jsx** — відображення та логіка антибонусів
+  - **AntibonusPopup.jsx** — спливаюче повідомлення про антибонус
+  - **BonusPanel.jsx** — бонуси, колесо фортуни, кейси
+  - **ClickButton.jsx** — кнопка кліку
+  - **GameStats.jsx** — статистика гравця
+  - **PrestigePanel.jsx** — престиж (скидання прогресу)
+  - **SkinPanel.jsx** — вибір та купівля скінів
+  - **UpgradePanel.jsx** — апгрейди
+
+- **src/db/indexedDB.js**  
+  Робота з IndexedDB для збереження прогресу.
+
+- **src/hooks/**  
+  Кастомні React-хуки:
+  - **useClicker.js** — основна логіка гри (стани, антибонуси, апгрейди)
+  - **useSaveGame.js** — автоматичне збереження прогресу
+
+- **src/sounds/**  
+  Звукові ефекти для гри (mp3-файли).
+
+- **src/styles/**  
+  SCSS-стилі для всіх компонентів і глобальні теми.
+
+- **src/utils/**  
+  Допоміжні функції (наприклад, для звуку, константи).
+
+- **.gitignore**  
+  Файли/папки, які не потрапляють у git.
+
+- **package.json**  
+  Опис залежностей та скриптів проекту.
+
+- **README.md**  
+  Документація проекту
 
 
 ## Основні можливості
