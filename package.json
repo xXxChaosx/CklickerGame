@@ -2,7 +2,6 @@
   "name": "duikt-clicker-game",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://xXChaosx.github.io/Clicker",
   "dependencies": {
     "framer-motion": "^6.0.0",
     "react": "^18.0.0",
