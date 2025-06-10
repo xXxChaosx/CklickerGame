@@ -21,6 +21,17 @@
   margin-bottom: 18px;
 }
 
+@media (max-width: 600px) {
+  .statsGrid {
+    gap: 8px;
+  }
+  .statCard {
+    min-width: 110px;
+    padding: 10px 8px;
+    font-size: 0.95rem;
+  }
+}
+
 .statCard {
   background: var(--stats-bg, #fff);
   border-radius: 12px;

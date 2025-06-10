@@ -14,6 +14,30 @@
   display: flex;
   gap: 28px;
   margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .skinsGrid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skinPanel {
+    padding: 8px;
+  }
+  .skinsGrid {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .skinItem {
+    width: 95vw;
+    min-width: unset;
+    max-width: 320px;
+  }
 }
 
 .skinItem {

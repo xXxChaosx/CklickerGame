@@ -7,8 +7,15 @@ $app-bg-neon: linear-gradient(135deg, #0f0c29, #302b63, #39ff14);
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; // Додає центрування по горизонталі
+  align-items: center;
   min-height: 100vh;
+}
+
+.main-sections {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .click-upgrade-row {
@@ -29,4 +36,30 @@ $app-bg-neon: linear-gradient(135deg, #0f0c29, #302b63, #39ff14);
   gap: 32px;
   width: 100%;
   margin-bottom: 32px;
+}
+
+/* Додаємо адаптивність */
+@media (max-width: 900px) {
+  .main-sections {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .centered-stack {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 8px;
+  }
+  .main-sections {
+    width: 100%;
+    padding: 0;
+  }
+  .centered-stack {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
 }

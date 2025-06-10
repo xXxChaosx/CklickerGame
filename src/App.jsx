@@ -46,6 +46,7 @@ const App = () => {
   } = useClicker();
 
   const [saveTimer, setSaveTimer] = useState(AUTO_SAVE_INTERVAL);
+  const [showAdmin, setShowAdmin] = useState(false);
 
   const timerRef = useRef();
   const antiBonusRef = useRef();
@@ -107,7 +108,38 @@ const App = () => {
   return (
     <div className={`app-container theme-${currentSkin}`}>
       <AntibonusPopup antibonus={antibonus} antibonusTimeLeft={antibonusTimeLeft} />
-      <AdminPanel addClickValue={handleAddClickValue} />
+      {/* Кнопка для відкриття адмін-панелі */}
+      {!showAdmin && (
+        <button
+          style={{
+            position: 'fixed',
+            top: 18,
+            right: 28,
+            zIndex: 1100,
+            background: '#e91e63',
+            color: '#fff',
+            border: 'none',
+            borderRadius: 8,
+            padding: '4px 16px', // зменшено padding по висоті
+            width: 60,           // ширина в 3 рази менша (було ~180px)
+            fontWeight: 'bold',
+            cursor: 'pointer',
+            fontSize: '0.9rem',  // трохи менший шрифт
+            boxShadow: '0 2px 8px #e91e6344'
+          }}
+          onClick={() => setShowAdmin(true)}
+        >
+          Adm
+        </button>
+      )}
+      {/* Адмін-панель */}
+      {showAdmin && (
+        <AdminPanel
+          addClickValue={handleAddClickValue}
+          showAdmin={showAdmin}
+          setShowAdmin={setShowAdmin}
+        />
+      )}
       <h1 className="game-title">Duikt Clicker Game</h1>
 
       <GameStats
