@@ -18,7 +18,7 @@
 - Завантажте проект
 
 - Натисніть "Code" → "Download ZIP" на сторінці репозиторію, або
-Клонувати через git: git clone https://github.com/ВАШ-НІК/ВАШ-РЕПОЗИТОРІЙ.git
+Клонувати через git: git clone https://github.com/xXxChaosx/CklickerGame.git
 
 - Відкрийте папку проекту у терміналі: cd назва_папки_з_грою
 
